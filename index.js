@@ -7,7 +7,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
-
 let api_client = new Twitter({
   consumer_key: '',
   consumer_secret: '',
@@ -49,13 +48,6 @@ app.get('/mentions_timeline', (req, res) => {
   });
 
 });
-
-
-app.post('/test', (req, res) => {
-
-  console.log(req.body);
-  res.send(req.body)
- });
 
 app.post('/post_tweet', (req, res) => {
   tweet = req.body
